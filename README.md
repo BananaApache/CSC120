@@ -10,7 +10,7 @@
 > - [Project 2]()
 >     - [Description]()
 #### Lab Tasks
-> - [Lab Task 0](https://github.com/BananaApache/CSC120/blob/main/src/week2/HelloWorld.java) - IntelliJ Setup
+> - [Lab Task 0](https://github.com/BananaApache/CSC120/blob/main/src/week2/HelloJava.java) - IntelliJ Setup
 > - [Lab Task 1](https://github.com/BananaApache/CSC120/tree/main/src/week2/GasLaw.java) - Fixing a Buggy Program
 > - [Lab Task 2](https://github.com/BananaApache/CSC120/tree/main/src/week3/LabTask3.java) - Killing Kangaroos
 > - [Lab Task 3](https://github.com/BananaApache/CSC120/blob/main/src/week4/ScubaDiving.java) - Nitrox SCUBA
