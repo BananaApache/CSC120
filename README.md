@@ -16,4 +16,4 @@
 > - [Lab Task 3](https://github.com/BananaApache/CSC120/blob/main/src/week4/ScubaDiving.java) - Nitrox SCUBA
 > - [Lab Task 4](https://github.com/BananaApache/CSC120/blob/main/src/week5/TaxTime.java) - Tax Time with **King Geoff**
 > - [Lab Task 5](https://github.com/BananaApache/CSC120/blob/main/src/week6/InterestingNumbers.java) - Fascinating Numbers
-> - [Lab Task 6]() - Debug and Deposit
+> - [Lab Task 7]() - Debug and Deposit (skipped 6)
