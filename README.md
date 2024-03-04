@@ -17,3 +17,5 @@
 > - [Lab Task 4](https://github.com/BananaApache/CSC120/blob/main/src/week5/TaxTime.java) - Tax Time with **King Geoff**
 > - [Lab Task 5](https://github.com/BananaApache/CSC120/blob/main/src/week6/InterestingNumbers.java) - Fascinating Numbers
 > - [Lab Task 7](https://github.com/BananaApache/CSC120/blob/main/src/week7/DebugLabTask.java) - Debug and Deposit (skipped 6)
+> - [Lab Task 8](https://github.com/BananaApache/CSC120/blob/main/src/week8/KindleClass.java) - Kindle Class
+> - [Lab Task 9](https://github.com/BananaApache/CSC120/blob/main/src/week8/StringReader.java) - String Reader
