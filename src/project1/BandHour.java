@@ -9,7 +9,7 @@ import java.util.Scanner;
     * Project 1
     * @author Daniel Li
 
- **/
+ */
 
 public class BandHour {
 
@@ -65,8 +65,8 @@ public class BandHour {
     /**
      * method that creates rows from user inputs
      * @return rows 2D array with
-    **/
-    private static double[][] createRows() {
+    */
+    public static double[][] createRows() {
 
         // declaring all variables here
         int number_of_rows, index, number_of_positions, count;
@@ -124,8 +124,8 @@ public class BandHour {
     /**
      * Method to add a musician based on user input
      * @param rows Takes in a 2d array of musicians
-    **/
-    private static void addMusician(double[][] rows) {
+    */
+    public static void addMusician(double[][] rows) {
 
         // declaring variables
         int row_position, input_position, input_weight, index;
@@ -206,8 +206,8 @@ public class BandHour {
     /**
      * Method to remove a musician's weight from a 2d array
      * @param rows Takes in a 2d array filled with musicians weights
-    **/
-    private static void removeMusician(double[][] rows) {
+    */
+    public static void removeMusician(double[][] rows) {
 
         // declaring variables
         int row_position, input_position;
@@ -256,8 +256,8 @@ public class BandHour {
     // start of printRows method
     /**
      * @param rows Takes in a 2d array filled with musicians' weights
-    **/
-    private static void printRows(double[][] rows) {
+    */
+    public static void printRows(double[][] rows) {
 
         // declaring variables
         int row, column;
