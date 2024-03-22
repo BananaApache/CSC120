@@ -19,3 +19,5 @@
 > - [Lab Task 7](https://github.com/BananaApache/CSC120/blob/main/src/week7/DebugLabTask.java) - Debug and Deposit (skipped 6)
 > - [Lab Task 8](https://github.com/BananaApache/CSC120/blob/main/src/week8/KindleClass.java) - Kindle Class
 > - [Lab Task 9](https://github.com/BananaApache/CSC120/blob/main/src/week8/StringReader.java) - String Reader
+> - [Lab Task 10](https://github.com/BananaApache/CSC120/blob/main/src/week9/UseParticle) - Fluid Particle
+> - [Lab Task 11]()

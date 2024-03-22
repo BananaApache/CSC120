@@ -280,7 +280,7 @@ public class BandHour {
                 System.out.print(rows[row][column] + " ");
             }
             // prints out sum and average
-            System.out.print(" SUM: " + sum + ", AVERAGE: ");
+            System.out.print("             SUM: " + sum + ", AVERAGE: ");
             System.out.printf("%.1f\n", ( sum / rows[row].length ));
         }
 
