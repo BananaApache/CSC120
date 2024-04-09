@@ -64,7 +64,7 @@ public class BandHour {
     // start of createRows method
     /**
      * method that creates rows from user inputs
-     * @return rows 2D array with
+     * @return rows 2D array with rows and columns
     */
     public static double[][] createRows() {
 
