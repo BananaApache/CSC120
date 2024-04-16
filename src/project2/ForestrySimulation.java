@@ -36,14 +36,14 @@ public class ForestrySimulation {
         System.out.println("----------------------------------");
         System.out.println();
 
-        // loop through the files
+        // loop through the argument that should be file names
         for (fileIndex = 0; fileIndex < args.length; fileIndex++) {
 
             System.out.println("Initializing from " + args[fileIndex]);
             System.out.println();
             Forest forest = new Forest(args[fileIndex], ReadFile(args[fileIndex]));
 
-            // keep taking inputs until user enters 'N'
+            // keep taking inputs until user enters 'N' (stands for next) or 'X'
             do {
 
                 // if the forest is empty, break
@@ -55,8 +55,9 @@ public class ForestrySimulation {
                 input = keyboard.next();
                 option = input.charAt(0);
 
-                // if the input is only one character
+                //! IDIOT PROOFING: making sure input is only one character
                 if (input.length() == 1) {
+                    // switch statement for the list of menu options
                     switch (Character.toUpperCase(option)) {
                         case 'P':
                             // print the forest
@@ -110,13 +111,13 @@ public class ForestrySimulation {
                             forest = forest.reapTrees(forest, reapHeight);
                             break;
                         case 'S':
-                            // save the forest
+                            // save the forest as a .db file
                             System.out.println("\nSaving file...");
                             SaveFile(forest, forest.name);
                             System.out.println();
                             break;
                         case 'L':
-                            // load the forest
+                            // load the forest from a .db file
                             System.out.print("Enter forest name: ");
                             forestName = keyboard.next();
                             System.out.println("\nLoading file...");
@@ -126,7 +127,7 @@ public class ForestrySimulation {
                             }
                             break;
                         case 'N':
-                            // move to the next forest
+                            // move on to the next forest
                             if (fileIndex != args.length - 1) {
                                 System.out.println("\nMoving to the next forest");
                             } else {
@@ -148,7 +149,7 @@ public class ForestrySimulation {
             }
             while (Character.toUpperCase(option) != 'N' && Character.toUpperCase(option) != 'X');
 
-            // break if user enters 'X'
+            // stop the program if user enters 'X'
             if (Character.toUpperCase(option) == 'X') {
                 break;
             }
@@ -168,7 +169,7 @@ public class ForestrySimulation {
 
         // initializing variables
         String[] treeData;
-        ArrayList<Tree> lines = new ArrayList<>();
+        ArrayList<Tree> trees = new ArrayList<>();
 
         // try opening the forest file
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(LOCAL_PATH + filename + ".csv"))) {
@@ -183,15 +184,15 @@ public class ForestrySimulation {
                 // Maple,2012,80,10.3
                 // public Tree(String species, int yearOfPlanting, double height, double growthRate)
 
-                lines.add(new Tree(
-                                treeData[0],
-                                Integer.parseInt(treeData[1]),
-                                Double.parseDouble(treeData[2]),
-                                Double.parseDouble(treeData[3])
+                trees.add(new Tree(
+                                treeData[0], // species
+                                Integer.parseInt(treeData[1]), // yearOfPlanting
+                                Double.parseDouble(treeData[2]), // height
+                                Double.parseDouble(treeData[3]) // growthRate
                 ));
                 line = bufferedReader.readLine();
             }
-            return lines;
+            return trees;
         }
         // catch exceptions
         catch (Exception e) {
@@ -211,6 +212,7 @@ public class ForestrySimulation {
 
         // try to write the file
         try (FileOutputStream fileOut = new FileOutputStream(LOCAL_PATH + forestName + ".db");
+             // write the object to file
              ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {
             objectOut.writeObject(forest);
             System.out.println("File successfully saved!");
@@ -235,6 +237,7 @@ public class ForestrySimulation {
         // try to read the file
         try {
             fromStream = new ObjectInputStream(new FileInputStream(LOCAL_PATH + forestName + ".db"));
+            // reads the file into an object
             forest = (Forest) fromStream.readObject();
             System.out.println();
             return forest;

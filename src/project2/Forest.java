@@ -9,7 +9,7 @@ public class Forest implements Serializable {
 
 
     // some constants
-    public enum Species {MAPLE, FIR, BIRCH};
+    public enum Species {MAPLE, FIR, BIRCH}
 
     public String name;
     public ArrayList<Tree> trees;
@@ -48,6 +48,7 @@ public class Forest implements Serializable {
         for (index = 0; index < forest.trees.size(); index++) {
             System.out.println(index + " " + forest.trees.get(index));
         }
+
         System.out.printf("There are %d trees, with an average height of %.2f%n", forest.trees.size(), forest.getAverage());
         System.out.println();
     }
@@ -98,6 +99,7 @@ public class Forest implements Serializable {
     public Forest reapTrees(Forest forest, int reapHeight) {
         int index;
 
+        // loop through the forest of trees
         for (index = 0; index < forest.trees.size(); index++) {
             double treeHeight = forest.trees.get(index).getHeight();
 
@@ -105,6 +107,7 @@ public class Forest implements Serializable {
             if (treeHeight >= reapHeight) {
                 System.out.println("Reaping the tall tree:  " + forest.trees.get(index));
 
+                // replace the tree with some random tree
                 Species species = Species.values()[(int) (Math.random() * Species.values().length)];
                 int yearOfPlanting = (int) (Math.random() * (MAX_YEAR - MIN_YEAR + 1) + MIN_YEAR);
                 double height = (Math.random() * (MAX_HEIGHT - MIN_HEIGHT + 1) + MIN_HEIGHT);

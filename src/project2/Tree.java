@@ -1,3 +1,4 @@
+
 package project2;
 
 // importing java libraries
@@ -8,15 +9,16 @@ public class Tree implements Serializable {
 
 
     // some constants
-    public enum Species {MAPLE, FIR, BIRCH};
-    private Species species;
-    private int yearOfPlanting;
+    public enum Species {MAPLE, FIR, BIRCH}
+    private final Species species;
+    private final int yearOfPlanting;
     private double height;
-    private double growthRate;
+    private final double growthRate;
 
 
     // constructor method
     public Tree(String species, int yearOfPlanting, double height, double growthRate) {
+        // get value from enum
         this.species = Species.valueOf(species.toUpperCase());
         this.yearOfPlanting = yearOfPlanting;
         this.height = height;
@@ -24,27 +26,9 @@ public class Tree implements Serializable {
     }
 
 
-    // get species
-    public Species getSpecies() {
-        return species;
-    }
-
-
-    // get yearOfPlanting
-    public int getYearOfPlanting() {
-        return yearOfPlanting;
-    }
-
-
     // get height
     public double getHeight() {
         return height;
-    }
-
-
-    // get growthRate
-    public double getGrowthRate() {
-        return growthRate;
     }
 
 
@@ -56,6 +40,8 @@ public class Tree implements Serializable {
 
     // to string method
     public String toString() {
+        // prints it like:
+        // MAPLE   2012   80.00'  10.3%
         return String.format("%-10s %-10d %-10.1f %s", species, yearOfPlanting, height, String.format("%.1f%%", growthRate));
     }
 
